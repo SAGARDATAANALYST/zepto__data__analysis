@@ -2,20 +2,20 @@
 
 ## 📌 Project Overview
 
-This project analyzes Zepto's e-commerce inventory dataset using PostgreSQL to extract meaningful business insights. It demonstrates how SQL can be used for data exploration, cleaning, and business analysis on a real-world retail dataset.
+This project analyzes Zepto's e-commerce inventory dataset using PostgreSQL to uncover meaningful business insights through SQL. The project demonstrates the complete data analysis workflow, including data exploration, data cleaning, and business analysis on a real-world retail inventory dataset.
 
-The objective of this project is to transform raw inventory data into actionable insights that support pricing, inventory management, and product performance analysis.
+The objective is to transform raw inventory data into actionable insights that can support pricing strategies, inventory management, and business decision-making.
 
 ---
 
 ## 🎯 Objectives
 
 - Perform Exploratory Data Analysis (EDA)
-- Clean and prepare raw inventory data
-- Analyze pricing and discount strategies
-- Evaluate inventory availability
+- Clean and preprocess raw inventory data
+- Analyze product pricing and discount strategies
+- Evaluate stock availability and inventory distribution
 - Generate business insights using SQL
-- Practice real-world SQL queries used by Data Analysts
+- Strengthen SQL skills through real-world business scenarios
 
 ---
 
@@ -23,20 +23,22 @@ The objective of this project is to transform raw inventory data into actionable
 
 **Source:** Kaggle
 
-The dataset contains inventory information for products listed on Zepto, including pricing, discounts, stock availability, product categories, and product weight.
+The dataset contains inventory information for products listed on Zepto, including product details, pricing, discounts, stock availability, and inventory quantities.
 
 ### Dataset Columns
 
-- SKU ID
-- Product Name
-- Category
-- MRP
-- Discount Percentage
-- Discounted Selling Price
-- Available Quantity
-- Weight (grams)
-- Stock Status
-- Package Quantity
+| Column | Description |
+|---------|-------------|
+| sku_id | Unique product identifier |
+| category | Product category |
+| name | Product name |
+| mrp | Maximum Retail Price |
+| discountPercent | Discount percentage |
+| discountedSellingPrice | Final selling price after discount |
+| availableQuantity | Available inventory quantity |
+| weightInGms | Product weight in grams |
+| outOfStock | Stock availability status |
+| quantity | Units per package |
 
 ---
 
@@ -50,48 +52,39 @@ The dataset contains inventory information for products listed on Zepto, includi
 
 ## 📊 Project Workflow
 
-### 1. Database Creation
+### 1. Database Setup
 
-- Created database
-- Designed table schema
+- Created database table
 - Defined appropriate data types
-- Imported CSV dataset
-
----
+- Imported CSV dataset into PostgreSQL
 
 ### 2. Data Exploration
 
 - Counted total records
-- Checked data structure
-- Identified null values
-- Explored unique categories
+- Explored dataset structure
+- Identified missing values
+- Examined unique product categories
 - Compared in-stock and out-of-stock products
-- Identified duplicate product entries
-
----
+- Identified duplicate product listings
 
 ### 3. Data Cleaning
 
 - Removed invalid records
-- Converted pricing from paise to rupees
+- Converted prices from paise to rupees
 - Standardized data for analysis
-- Verified cleaned dataset
-
----
 
 ### 4. Business Analysis
 
-Performed SQL analysis to answer business questions such as:
+Performed SQL analysis to answer key business questions such as:
 
-- Top products with the highest discounts
+- Top 10 products with the highest discounts
 - High-value products currently out of stock
-- Estimated revenue by category
-- Products with MRP above ₹500
+- Estimated revenue by product category
+- Premium products with low discounts
 - Categories offering the highest average discounts
 - Best value products based on price per gram
-- Inventory distribution by category
-- Product weight segmentation
-- Stock availability analysis
+- Product segmentation by weight
+- Total inventory weight by category
 
 ---
 
@@ -104,38 +97,33 @@ Performed SQL analysis to answer business questions such as:
 - HAVING
 - Aggregate Functions
 - CASE WHEN
-- Joins
-- Common Table Expressions (CTEs)
-- Subqueries
-- Window Functions
-- Data Cleaning Techniques
+- Data Cleaning
+- DISTINCT
+- DELETE
+- UPDATE
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-├── Dataset/
-│   └── zepto_inventory.csv
-│
-├── SQL Queries/
-│   └── zepto_inventory_analysis.sql
+zepto-sql-data-analysis/
 │
 ├── README.md
+├── zepto_inventory_analysis.sql
+└── zepto_v2.csv
 ```
 
 ---
 
-## 💼 Business Insights
+## 💼 Key Business Insights
 
-Some key insights generated from the analysis include:
-
-- Product categories with the highest inventory value
-- Categories providing the largest discounts
-- Products offering the best value for money
-- Inventory shortages across premium products
-- Pricing patterns across different categories
-- Overall inventory distribution
+- Identified categories generating the highest estimated inventory value.
+- Analyzed products offering the highest discounts.
+- Detected premium products that were unavailable in stock.
+- Compared inventory availability across different product categories.
+- Calculated price per gram to identify value-for-money products.
+- Categorized products based on weight for inventory segmentation.
 
 ---
 
@@ -144,18 +132,18 @@ Some key insights generated from the analysis include:
 - SQL Query Writing
 - Data Cleaning
 - Exploratory Data Analysis (EDA)
-- Business Problem Solving
 - Retail & E-Commerce Analytics
 - Inventory Analysis
 - Pricing Analysis
+- Business Problem Solving
 - Data Interpretation
 
 ---
 
 ## ⭐ Project Highlights
 
-- Real-world E-commerce Dataset
+- Real-world E-Commerce Dataset
 - End-to-End SQL Analysis
 - Business-Oriented Insights
-- Interview-Level SQL Queries
 - Portfolio-Ready Project
+- Beginner to Intermediate SQL Concepts
